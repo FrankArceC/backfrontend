@@ -1,0 +1,2 @@
+ya mandamos datos a mongo con timestamp y 
+ya hasheamos el password vamos en el uso del jwt
