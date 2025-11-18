@@ -1,4 +1,4 @@
- import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import {AuthProvider} from "./context/AuthContext.jsx"
@@ -8,6 +8,7 @@ import TaskFormPage from "./pages/TaskFormPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import { TaskProvider } from "./context/TaskContext.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
      "use no memo";
@@ -15,6 +16,7 @@ function App() {
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path='/' element={<HomePage />}></Route>
           <Route path='/login' element={<LoginPage />}></Route>

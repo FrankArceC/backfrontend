@@ -1,11 +1,24 @@
-import {useAuth} from "../context/AuthContext.jsx";
+import { useEffect } from "react";
+import {useTasks} from "../context/TaskContext.jsx";
 
 
 function TaskPage() {   
-    const {user} = useAuth();
-    console.log(user);
+    const {getTasks, tasks} = useTasks();
+
+    useEffect(() => {
+        getTasks();
+    }, []);
+    if (tasks.length === 0) return <h1>No hay tareas aun</h1>
+
     return (    
-        <div>Task Page</div>
+        <div>{
+            tasks.map(task => (
+                <div key={task._id}>
+                    <h1>{task.title}</h1>
+                    <p>{task.description}</p>
+                </div>
+            ))
+        }</div>
     )
 }
 export default TaskPage;
