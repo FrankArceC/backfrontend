@@ -2,7 +2,7 @@ import { createContext, useState, useContext, useEffect } from "react";
 import { registerRequest, loginRequest, verifyTokenRequest } from "../api/auth.js"
 
 import Cookies from 'js-cookie'
-import { set } from "mongoose";
+//import { set } from "mongoose";
 //import { is } from "zod/locales";
 export const AuthContext = createContext();
 export const useAuth = () => {
