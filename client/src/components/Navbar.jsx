@@ -4,7 +4,7 @@ function Navbar() {
     const { isAuthenticated, logout, user } = useAuth();
 
     return (
-        <nav className="bg-zinc-700 my-3 flex justify-between py-5 px-10 rounded-lg">
+        <nav className="bg-zinc-700 my-3 mx-10 flex justify-between py-5 px-10 rounded-lg">
             <Link to="/">
                 <h1 className="text-2xl font-bold">Task Manager</h1>
             </Link>
@@ -13,7 +13,7 @@ function Navbar() {
                 {isAuthenticated ? (
                     <>
                         <li>
-                            Bienvenido {user.name}
+                            Bienvenido <span className="font-bold text-indigo-200">{user.name}</span>
                         </li>
                         <li>
                             <Link to="/add-task"
