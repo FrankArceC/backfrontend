@@ -13,7 +13,7 @@ function Navbar() {
                 {isAuthenticated ? (
                     <>
                         <li>
-                            Bienvenido <span className="font-bold text-indigo-200">{user.name}</span>
+                            Bienvenido <span className="font-bold text-indigo-200"><Link to="/profile">{user.name}</Link></span>
                         </li>
                         <li>
                             <Link to="/add-task"
